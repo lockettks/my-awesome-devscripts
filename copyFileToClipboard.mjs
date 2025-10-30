@@ -2,8 +2,19 @@
 import fs from "fs";
 import path from "path";
 import clipboardy from "clipboardy";
+import os from 'os';
 
-const files = process.argv.slice(2);
+function expandHome(filePath) {
+    if (!filePath) return filePath;
+    if (filePath.startsWith('~')) {
+        return path.join(os.homedir(), filePath.slice(1));
+    }
+    return filePath;
+}
+
+// Replace argv paths
+const files = process.argv.slice(2).map(expandHome);
+
 if (files.length === 0) {
     console.error("❌ Please provide at least one file path.");
     process.exit(1);
