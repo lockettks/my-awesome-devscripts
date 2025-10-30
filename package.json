@@ -1,0 +1,24 @@
+{
+  "name": "my-awesome-devscripts",
+  "version": "1.0.0",
+  "description": "My box of tricks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lockettks/my-awesome-devscripts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lockettks/my-awesome-devscripts/issues"
+  },
+  "homepage": "https://github.com/lockettks/my-awesome-devscripts#readme",
+  "dependencies": {
+    "clipboardy": "^5.0.0"
+  }
+}
